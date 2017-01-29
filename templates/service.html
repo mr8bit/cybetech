@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container ">
+    <div class="row ">
+        <div class="col-md-12">
+            <div class="page-title">Услуги</div>
+            <div class="title-quote">Ваша идея. Наша реализация.</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row service">
+        <div class="col-md-6 col-lg-6 col-sm-6 service-card">
+            <img src="{% static "img/analytics.png" %}" height="55">
+            <div class="title">Стратегия и Аналитика.</div>
+            <div class="description">Исследования и анализ рынка. Планирование проекта. Прогнизирование поведедния
+                пользователя. Аналитика посещяемости.
+            </div>
+            <div class="price">от <span>7000</span> руб.</div>
+            <div class="project-complete">
+                <div class="title">Выполненые работы</div>
+                <ul>
+                    <li><a href="">Нео матрица</a></li>
+                    <li><a href="">Партия Яблоко</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6 service-card">
+            <img src="{% static "img/design.png" %}" height="55">
+            <div class="title">Системы интерфейса.</div>
+            <div class="description">Дизайн интерфейса, визуальный дизайн, адаптивный дизайн и наборы пользовательских
+                элементов.
+            </div>
+            <div class="price">от <span>10599</span> руб.</div>
+            <div class="project-complete">
+                <div class="title">Выполненые работы</div>
+                <ul>
+                    <li><a href="">Нео матрица</a></li>
+                    <li><a href="">Партия Яблоко</a></li>
+                    <li><a href="">Lambda</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6  service-card">
+            <img src="{% static "img/web.png" %}" height="55">
+            <div class="title">Web решения.</div>
+            <div class="description">Front-end разработка. Внедрение CMS. Поддержка и обслуживание. Разработка интернет
+                магазина. Внесение корректировок в имеющиеся проекты.
+            </div>
+            <div class="price">от <span>19999</span> руб.</div>
+            <div class="project-complete">
+                <div class="title">Выполненые работы</div>
+                <ul>
+                    <li><a href="">Нео матрица</a></li>
+                    <li><a href="">Партия Яблоко</a></li>
+                                        <li><a href="">Lambda</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-sm-6 service-card">
+            <img src="{% static "img/prototip.png" %}" height="55">
+            <div class="title">Прототипирование и инжиниринг.</div>
+            <div class="description">Разработка, создание и разводка плат. Разработка кода для МК. Моделирование в SolidWorks.
+            </div>
+            <div class="price">по договоренности</div>
+            <div class="project-complete">
+                <div class="title">Выполненые работы</div>
+                <ul>
+                    <li><a href="">Роза Хутор</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

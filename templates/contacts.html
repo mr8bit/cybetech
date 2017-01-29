@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+ <div class="container ">
+    <div class="row ">
+        <div class="col-md-12">
+            <div class="page-title">контакты</div>
+            <div class="title-quote">Мы здесь, для того, что бы помочь вам изменить мир.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row contacts">
+        <div class="col-md-3  col-sm-3  hidden-xs side-bar">
+            <div class="info">
+                    <div class="title">Адресс</div>
+                    <div class="description">{{ contact.address }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Email</div>
+                    <div class="description"> {{ contact.email }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Телефон</div>
+                    <div class="description"> {{ contact.phone }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Мы в соц. сетях</div>
+                    <div class="soc">
+                        <ul>
+                            {% for soc in contact.contacts.all %}
+                                <li><a href="{{ soc.link }}" target="_blank" >{{ soc.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-9 col-sm-9">
+            <div class="form">
+                <a class="btn to-telegram" href="{{ contact.telegram }}"><i class="mdi mdi-telegram"></i> Напишите нам в Телеграмм</a>
+                <form action="/contacts" method="post">
+                        {% csrf_token %}
+                    <div class="or">
+                        Или же напишите нам на почту, используя контактную форму ниже
+                    </div>
+                    <div class="form-group">
+                        <input id="id_name" name="name" class="form-control" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <input id="id_name_company" name="name_company"  class="form-control" placeholder="Название вашей компании">
+                    </div>
+                    <div class="form-group">
+                        <input id="id_email" name="email" class="form-control" placeholder="Ваше Email">
+                    </div>
+                    <div class="form-group">
+                        <input id="id_phone" name="phone" class="form-control" placeholder="Телефон">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="id_massage" name="massage" class="form-control" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <button   class="btn submit" type="submit">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3  col-sm-3 visible-xs-12 hidden-md hidden-lg  hidden-sm side-bar">
+            <div class="info  " style="margin-top: 40px">
+                    <div class="title">Адресс</div>
+                    <div class="description">{{ contact.address }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Email</div>
+                    <div class="description"> {{ contact.email }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Телефон</div>
+                    <div class="description"> {{ contact.phone }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Мы в соц. сетях</div>
+                    <div class="soc">
+                        <ul>
+                            {% for soc in contact.contacts.all %}
+                                <li><a href="{{ soc.link }}" target="_blank" >{{ soc.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

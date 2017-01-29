@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <!--*******************Имя страницы и TITLE******************-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-title">О Нас</div>
+                <div class="quote">
+                    <div class="text">“Наше любимое развлечение: искать и находить решения в невыполнимых задачах”
+                    </div>
+                    <div class="author">- Артемий Мазаев, основатель</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--*******************Имя страницы и TITLE******************-->
+
+    <!--*******************Карусель******************-->
+    <div class="container-fluid no-padding">
+
+
+        <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="{% static "img/cmylb-7e_ia-joel-beukelman.jpg" %}">
+                </div>
+                <div class="item">
+                    <img src="{% static "img/gn_niunjyji-nick-karvounis.jpg" %}">
+                </div>
+                <div class="item">
+                    <img src="{% static "img/qowng4sypim-joel-beukelman.jpg" %}">
+                </div>
+                <div class="item">
+                    <img src="{% static "img/rfbl4v5uiw4-joel-beukelman.jpg" %}">
+                </div>
+                <div class="item">
+                    <img src="{% static "img/sia5bx4c0p8-joel-beukelman.jpg" %}">
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="mdi mdi-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="mdi mdi-chevron-right" aria-hidden="true"></span>
+            </a>
+        </div>
+
+    </div>
+    <!--*******************Карусель******************-->
+
+
+    <!--*******************Как мы работаем******************-->
+    <div class="container">
+        <div class="row how-we-work">
+            <div class="col-md-9 ">
+                <h2>Кто мы</h2>
+                <p>Мы команда профессионалов, кто любит дизайн и технологии. Наше главное правило дрежать вещи простыми.
+                    Мы
+                    поможем вам сосредоточиться на том, что вам важно. Мы поможем вам спланировать, разработать и
+                    поставить
+                    на продакшн наилучший продукт.</p>
+            </div>
+
+                <div class="col-md-6 mt-40">
+                    <img src="{% static 'img/gn_niunjyji-nick-karvounis.jpg' %}" class="img-responsive">
+                </div>
+                <div class="col-md-6 mt-40">
+                    <img src="{% static 'img/lfv0v3_2h6s-mike-kononov.jpg' %}" class="img-responsive">
+                </div>
+
+
+        </div>
+    </div>
+    <!--*******************Как мы работаем******************-->
+
+
+    <!--*******************Как мы работаем******************-->
+    <div class="container">
+        <div class="row how-we-work">
+            <div class="col-md-9 mb-40">
+                <h2>Как мы работаем?</h2>
+                <p>Мы используем индивидуальный подход к каждому клиенту, чтобы взаимодействовать с наиболее
+                    прудуктивным и
+                    эффективным способом.</p>
+            </div>
+            <div class="col-md-6 card-how">
+                <div class="index">01</div>
+                <div>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="title">Стратегия и Аналитика</div>
+                <div class="content">Для лушчего понимания и общения с клентом мы собираем всю информацию, о клиенте и
+                    его
+                    продукте, прежде
+                    чем начать работу. Мы пишем спецификацию, техническое задание в полных деталях и создаем план работ.
+                </div>
+
+            </div>
+            <div class="col-md-6 card-how">
+                <div class="index">02</div>
+                <div>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="title">UX Дизайн</div>
+                <div class="content">Используя каркасы и систему сеток, мы опрделяем будущее интерфейса . UX дизайн
+                    важен,
+                    что бы представить клиентам, как проект будет выглядить в будущем.
+                </div>
+
+            </div>
+            <div class="col-md-6 card-how">
+                <div class="index">03</div>
+                <div>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="title">UI и тестирование</div>
+                <div class="content">Определим творческое направление для вашего продукта - цвета, шрифты, иконки,
+                    дизайн UI
+                    компоненты
+                    на основе ключевых решений. Разработка дизайна пользовательского интерфейса имеет важное значение
+                    для
+                    проекта, чтобы остаться в тренде и иметь свой собственный и непоторимый стиль.
+                </div>
+            </div>
+            <div class="col-md-6 card-how">
+                <div class="index">04</div>
+                <div>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="title">Интерактивный дизайн</div>
+                <div class="content">Разработка UI-UX это просто часть работы. Мы же демострируем взаимодействие между
+                    пользователем и интерфейсом. Так же определяем каким образом интерфейс далжен реагировать на
+                    взаимойдсвие
+                    с пользователем.
+                </div>
+            </div>
+            <div class="col-md-6 card-how">
+                <div class="index">05</div>
+                <div>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span>
+                </div>
+                <div class="title">Разработка</div>
+                <div class="content">Реализация проектныз решений является одним из самых важных этапов нашенго
+                    процесса.
+                    Наша команда разработчиков сосредоточено на поддержании целостности архитектуры проекта.
+                </div>
+            </div>
+            <div class="col-md-6 card-how">
+                <div class="index">06</div>
+                <div>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                </div>
+                <div class="title">Поддержка проекта</div>
+                <div class="content">Мы обеспечиваем поддержку проектов, на постоянной основе. Мы не только напомним
+                    пароль
+                    от сайта клиента, но и исправляем "косяки" их штатных сотрудников.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--*******************Как мы работаем******************-->
+
+    <!--*******************Что мы можем сделать******************-->
+    <div class="container">
+        <div class="row what-we-do no-border-bottom">
+            <div class="col-md-12">
+                <h2>Наша миссия</h2>
+                <p>Мы считаем что наука меняет мир к лучшему, и мы стремимся быть частью этого разватия. Используя в
+                    разработке научный подход.</p>
+                <div class="we-do">
+                    <ul>
+                        <li><span class="thin-25"> <span
+                                class="light-25">01</span> - Улучшить то что было уже до вас. </span></li>
+                        <li><span class="thin-25"> <span class="light-25">02</span> - Сделать сложные многофункциональные вещи простыми. </span>
+                        </li>
+                        <li><span class="thin-25"> <span class="light-25">03</span> - Повысить конверсию и уровень качества. </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--*******************Что мы можем сделать******************-->
+{% endblock %}

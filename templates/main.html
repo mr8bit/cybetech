@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<!--*******************TITLE и циатата ******************-->
+<div class="container">
+    <div class="row main-tagline">
+        <div class="col-md-6">
+            <div class="first-tagline">Мы создатели лаконичных и адаптивных продуктов.</div>
+        </div>
+        <div class="col-md-6">
+            <div class="second-tagline">CyberTech - это команда с полным спектором услуг. Мы ужу выполнили десяток
+                интересных проектов в которые входят продукты для таких компаний как КлючАвто, Омский НИИ
+                Приборостроения, Нео Матрица Здоровья, Партия Яблоко, Аффина. Наш главный принцил делать проше самые
+                сложные веши.
+            </div>
+        </div>
+    </div>
+</div>
+<!--*******************TITLE и циатата ******************-->
+
+<!--*******************Что мы можем сделать******************-->
+<div class="container">
+    <div class="row what-we-do">
+        <div class="col-md-12">
+            <h2>Что мы можем сделать?</h2>
+            <div class="we-do">
+                <ul>
+                    <li><span class="thin-25"> <span
+                            class="light-25">01</span> - Улучшить то что было уже до вас. </span></li>
+                    <li><span class="thin-25"> <span class="light-25">02</span> - Сделать сложные многофункциональные вещи простыми. </span>
+                    </li>
+                    <li><span class="thin-25"> <span class="light-25">03</span> - Повысить конверсию и уровень качества. </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--*******************Что мы можем сделать******************-->
+
+<!--*******************Что мы сделали******************-->
+<div class="container">
+    <div class="row we-make">
+        <div class="col-md-12">
+            <h2>Что мы сделали?</h2>
+            <ul>
+                <li><img src="{% static "img/keyauto_icon.png"  %}"></li>
+                <li><img src="{% static "img/OmskNii.png"  %}"></li>
+                <li><img src="{% static "img/mai.png"  %}"></li>
+                <li><img src="{% static "img/mos.png"  %}"></li>
+                <li><img src="{% static "img/ya.png"  %}"></li>
+                <li><img src="{% static "img/affina.png"  %}"></li>
+            </ul>
+        </div>
+        <div class="col-md-7 col-sm-6">
+            <div class="card drone">
+                <div class="description">создание дрона прехватчика для Омского НИИ Приборостроения</div>
+                <div class="title">
+                    Новый вид безопастности
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-6">
+            <div class="card keyauto">
+                <div class="description">Разработка по для информационного коиска ключ авто
+                </div>
+                <div class="title">
+                    простота и удобствО
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="card lambda">
+                <div class="description">Разработка сайта СТУДЕНЧЕСКОГО клуба МАИ Lambda</div>
+                <div class="title">
+                    Учеба и знания
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="card neoselen">
+                <div class="description">Разработка сайта для формацевтической компании Нео Матрица здоровья
+                </div>
+                <div class="title">
+                    Забота о здоровье и близких
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--*******************Что мы сделали******************-->
+
+
+<!--*******************Как мы работаем******************-->
+<div class="container">
+    <div class="row how-we-work">
+        <div class="col-md-9 mb-40">
+            <h2>Как мы работаем?</h2>
+            <p>Мы используем индивидуальный подход к каждому клиенту, чтобы взаимодействовать с наиболее прудуктивным и
+                эффективным способом.</p>
+        </div>
+        <div class="col-md-6 col-sm-6 card-how">
+            <div class="index">01</div>
+            <div>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="title">Стратегия и Аналитика</div>
+            <div class="content">Для лушчего понимания и общения с клентом мы собираем всю информацию, о клиенте и его
+                продукте, прежде
+                чем начать работу. Мы пишем спецификацию, техническое задание в полных деталях и создаем план работ.
+            </div>
+
+        </div>
+        <div class="col-md-6  col-sm-6 card-how">
+            <div class="index">02</div>
+            <div>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="title">UX Дизайн</div>
+            <div class="content">Используя каркасы и систему сеток, мы опрделяем будущее интерфейса . UX дизайн важен,
+                что бы представить клиентам, как проект будет выглядить в будущем.
+            </div>
+
+        </div>
+        <div class="col-md-6 col-sm-6 card-how">
+            <div class="index">03</div>
+            <div>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="title">UI и тестирование</div>
+            <div class="content">Определим творческое направление для вашего продукта - цвета, шрифты, иконки, дизайн UI
+                компоненты. Разработка дизайна пользовательского интерфейса имеет важное значение для
+                проекта, чтобы остаться в тренде и иметь свой собственный и непоторимый стиль.
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 card-how">
+            <div class="index">04</div>
+            <div>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="title">Интерактивный дизайн</div>
+            <div class="content">Разработка UI-UX это просто часть работы. Мы же демострируем взаимодействие между
+                пользователем и интерфейсом. Так же определяем каким образом интерфейс далжен реагировать на
+                взаимойдсвие
+                с пользователем.
+            </div>
+        </div>
+        <div class="col-md-6  col-sm-6 card-how">
+            <div class="index">05</div>
+            <div>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span></span>
+            </div>
+            <div class="title">Разработка</div>
+            <div class="content">Реализация проектныз решений является одним из самых важных этапов нашенго процесса.
+                Наша команда разработчиков сосредоточено на поддержании целостности архитектуры проекта.
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6  card-how">
+            <div class="index">06</div>
+            <div>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+            </div>
+            <div class="title">Поддержка проекта</div>
+            <div class="content">Мы обеспечиваем поддержку проектов, на постоянной основе. Мы не только напомним пароль
+                от сайта клиента, но и исправляем "косяки" их штатных сотрудников.
+            </div>
+        </div>
+    </div>
+</div>
+<!--*******************Как мы работаем******************-->
+
+
+<!--*******************Цитата******************-->
+<div class="container">
+    <div class="quote">
+        <div class="text">“CyberTech - команда толантливых парней, которые в кратчайшие сроки разработали сложный проект.”
+        </div>
+        <div class="author">- Иван Латкирин, Маректинговый Директор КлючАвто</div>
+    </div>
+</div>
+<!--*******************Цитата******************-->
+
+{% endblock %}

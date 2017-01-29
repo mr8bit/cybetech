@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="page-title">Заказать</div>
+                <div class="title-quote">Вы на шаг ближе к совершентсву.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row order">
+            <div class="title-order">1. Выберите что хотите заказать</div>
+
+            <div class="col-md-3  col-sm-6 order-card">
+                <div class="border" data-order="Стратегия и Аналитика">
+                    <img src="{% static "img/analytics.png" %}" height="60">
+                    <div class="title">Стратегия <br> и <br> Аналитика</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6  order-card">
+                <div class="border" data-order="Дизайн интерфейса">
+                    <img src="{% static "img/design.png" %}" height="60">
+                    <div class="title">Дизайн интерфейса</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6  order-card">
+                <div class="border" data-order="Разработка сайта">
+                    <img src="{% static "img/web.png" %}" height="60">
+                    <div class="title">Разработка сайта</div>
+                </div>
+            </div>
+            <div class="col-md-3  col-sm-6  order-card">
+                <div class="border" data-order="Прототипирование">
+                    <img src="{% static "img/prototip.png" %}" height="60">
+                    <div class="title">Прототипирование <br> и <br> инжиниринг</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row contacts">
+            <div class="title-order">2. Заполните форму</div>
+
+            <div class="col-md-3  col-sm-3  hidden-xs side-bar">
+                <div class="info">
+                    <div class="title">Адресс</div>
+                    <div class="description">{{ contact.address }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Email</div>
+                    <div class="description"> {{ contact.email }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Телефон</div>
+                    <div class="description"> {{ contact.phone }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Мы в соц. сетях</div>
+                    <div class="soc">
+                        <ul>
+                            {% for soc in contact.contacts.all %}
+                                <li><a href="{{ soc.link }}" target="_blank" >{{ soc.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9">
+                <div class="form">
+                    <form action="/order" method="post">
+                        {% csrf_token %}
+                        <input style="display: none" name="order" id="order">
+                        <div class="form-group" style="padding: 0 0 15px 0;">
+                            <input class="form-control" id="id_name" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="id_name_company" name="name_company"
+                                   placeholder="Название вашей компании">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="id_email" name="email" placeholder="Ваше Email">
+                        </div>
+                        <div class="form-group">
+                            <input id="id_phone" name="phone" class="form-control" placeholder="Телефон">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="id_massage" name="massage"
+                                      placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <button class="btn submit" type="submit">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3  col-sm-3 visible-xs-12 hidden-md hidden-lg  hidden-sm side-bar">
+                 <div class="info  " style="margin-top: 40px">
+                    <div class="title">Адресс</div>
+                    <div class="description">{{ contact.address }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Email</div>
+                    <div class="description"> {{ contact.email }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Телефон</div>
+                    <div class="description"> {{ contact.phone }}
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="title">Мы в соц. сетях</div>
+                    <div class="soc">
+                        <ul>
+                            {% for soc in contact.contacts.all %}
+                                <li><a href="{{ soc.link }}" target="_blank" >{{ soc.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
