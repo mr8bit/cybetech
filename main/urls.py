@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^order$', views.order, name="order"),
     url(r'^service$', views.service, name="service"),
     url(r'^complete$', views.complete, name="complete"),
+    url(r'^not_added$', views.not_added, name="not_added"),
 ]

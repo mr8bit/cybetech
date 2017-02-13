@@ -74,3 +74,8 @@ def complete(request):
     context = {}
     context['contact'] = Contacts.objects.last()
     return TemplateResponse(request, "complete.html", context)
+
+def not_added(request):
+    context = {}
+    context['contact'] = Contacts.objects.last()
+    return TemplateResponse(request, "not_added.html", context)
